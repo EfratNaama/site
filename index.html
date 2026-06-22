@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קטלוג ספריה</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Library.js" defer></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>קטלוג ספריה</h1>
+    </header>
+
+    <main>
+
+        <section class="top-actions">
+            <button id="openFormButton">הוסף ספר חדש</button>
+        </section>
+
+        <section class="search-area">
+            <input type="text" id="searchInput" placeholder="הקלד שם ספר או שם מחבר">
+
+            <select id="searchType">
+                <option value="title">חיפוש לפי שם ספר</option>
+                <option value="author">חיפוש לפי שם מחבר</option>
+            </select>
+
+            <button id="searchButton">חיפוש</button>
+            <button id="showAllButton">הצג הכל</button>
+        </section>
+
+        <section class="form-area hidden" id="formArea">
+            <h2>הוספת ספר חדש</h2>
+
+            <form id="addBookForm">
+                <input type="text" id="title" placeholder="שם הספר">
+                <input type="text" id="author" placeholder="שם המחבר">
+                <input type="number" id="publicationYear" placeholder="שנת הוצאה">
+                <input type="text" id="imageUrl" placeholder="קישור לתמונה">
+                <textarea id="summary" placeholder="תקציר הספר"></textarea>
+                <textarea id="nytReview" placeholder="ביקורת ספרותית / ביקורת ניו יורק טיימס"></textarea>
+
+                <div class="form-buttons">
+                    <button type="submit">שמור ספר</button>
+                    <button type="button" id="closeFormButton">סגור</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="booksContainer" class="books-container"></section>
+
+    </main>
+
+</body>
+</html>
